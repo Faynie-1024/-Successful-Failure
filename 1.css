@@ -1,0 +1,167 @@
+﻿}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1ea;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+    user-select: none;
+    letter-spacing: 0.05em;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.arrow {
+    margin-top: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    color: #555;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #000;
+}
+
+input,
+select {
+    padding: 16px;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 400px;
+    width: 90%;
+}
+
+button {
+    padding: 16px 36px;
+    background-color: #2b2b2b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* 第四頁結果文字與噴火動畫 */
+#page4 h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #e63946;
+    user-select: none;
+    animation: rotateFire 3s linear infinite;
+    margin-bottom: 2rem;
+    text-shadow:
+            0 0 8px #f94144,
+            0 0 20px #f3722c,
+            0 0 30px #f8961e;
+    transform-origin: center;
+    display: inline-block;
+}
+
+@keyframes rotateFire {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+.fire-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 2rem;
+}
+
+.fire {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 80px;
+    background: radial-gradient(circle at center, #f94144, #f3722c 50%, transparent 80%);
+    filter: blur(4px);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.fire1 {
+    left: 10%;
+    animation-delay: 0s;
+}
+.fire2 {
+    left: 45%;
+    width: 50px;
+    height: 100px;
+    animation-delay: 0.3s;
+}
+.fire3 {
+    left: 75%;
+    width: 35px;
+    height: 70px;
+    animation-delay: 0.6s;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1.2) scaleX(0.9);
+        opacity: 0.8;
+    }
+}

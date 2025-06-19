@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>失敗成功學</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="1.css" />
+</head>
+<body>
+<!-- 頁面 1 -->
+<div class="page active" id="page1">
+    <h1>失敗成功學</h1>
+    <div class="arrow" onclick="nextPage()" role="button" tabindex="0" aria-label="下一頁">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="6 13 12 19 18 13"></polyline>
+        </svg>
+    </div>
+</div>
+
+<!-- 頁面 2 -->
+<div class="page" id="page2">
+    <p>
+        在因為早上起不來早八賴床嗎？<br />
+        還在因作業拖到最後一刻困擾嗎？<br />
+        還在因身邊所有人比自己優秀導致自我價值感降低而憂鬱嗎？<br /><br />
+        太好了！會焦慮就代表你還想努力！<br />
+        告訴我，讓我們迎向更徹底的失敗吧！
+    </p>
+    <div class="arrow" onclick="nextPage()" role="button" tabindex="0" aria-label="下一頁">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="6 13 12 19 18 13"></polyline>
+        </svg>
+    </div>
+</div>
+
+<!-- 頁面 3 -->
+<div class="page" id="page3">
+    <h1>失敗抽抽樂</h1>
+    <p>今天要幹嘛？</p>
+    <select id="failType">
+        <option value="study">學業失敗</option>
+        <option value="emotion">情緒失敗</option>
+    </select>
+    <br /><br />
+    <input type="text" id="userInput" placeholder="輸入你的焦慮（可略）" />
+    <br />
+    <button onclick="drawReply()">抽出指令</button>
+    <div id="result"></div>
+    <button onclick="drawReply()">再來一個</button>
+</div>
+
+<!-- 頁面 4 -->
+<div class="page" id="page4">
+    <h1 id="resultText"></h1>
+    <div class="fire-container">
+        <!-- 噴火動畫用CSS製作 -->
+        <div class="fire fire1"></div>
+        <div class="fire fire2"></div>
+        <div class="fire fire3"></div>
+    </div>
+    <button onclick="goBack()">重新抽籤</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
